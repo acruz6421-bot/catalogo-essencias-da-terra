@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Essências da Terra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d2d2d;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 60px 0 40px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a96e, #f4e4bc);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .perfume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .perfume-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .perfume-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c9a96e, #f4e4bc);
+        }
+
+        .perfume-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .perfume-image {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin: 0 auto 25px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .perfume-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .perfume-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .perfume-style {
+            display: inline-block;
+            background: linear-gradient(135deg, #c9a96e, #f4e4bc);
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #2c3e50;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .category-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .perfume-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .perfume-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Catálogo Essências da Terra</h1>
+            <p>Descubra nossa coleção exclusiva de fragrâncias inspiradas nos perfumes mais icônicos do mundo</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Perfumes Masculinos -->
+        <section>
+            <h2 class="section-title">Perfumes Masculinos</h2>
+            <div class="category-intro">
+                <p>Uma seleção refinada de fragrâncias masculinas que expressam força, elegância e personalidade. Cada perfume foi cuidadosamente inspirado nos clássicos mais admirados da perfumaria mundial.</p>
+            </div>
+            <div class="perfume-grid" id="masculinos">
+                <!-- Perfumes masculinos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Perfumes Femininos -->
+        <section>
+            <h2 class="section-title">Perfumes Femininos</h2>
+            <div class="category-intro">
+                <p>Fragrâncias que celebram a feminilidade em todas as suas facetas - delicadas e poderosas, clássicas e modernas, sempre encantadoras e memoráveis.</p>
+            </div>
+            <div class="perfume-grid" id="femininos">
+                <!-- Perfumes femininos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Perfumes Unissex -->
+        <section>
+            <h2 class="section-title">Perfumes Unissex</h2>
+            <div class="category-intro">
+                <p>Fragrâncias versáteis que transcendem gêneros, criadas para quem aprecia a arte da perfumaria sem limitações, expressando individualidade e sofisticação.</p>
+            </div>
+            <div class="perfume-grid" id="unissex">
+                <!-- Perfumes unissex serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <script src="perfumes_data.js"></script>
+    <script>
+
+        // Função para criar um card de perfume
+        function createPerfumeCard(perfume) {
+            return `
+                <div class="perfume-card">
+                    <img src="${perfume.image}" alt="${perfume.name}" class="perfume-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik02MCA0MEw4MCA2MEw2MCA4MEw0MCA2MEw2MCA0MFoiIGZpbGw9IiNEREREREQiLz4KPHRleHQgeD0iNjAiIHk9IjEwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzk5OTk5OSIgZm9udC1zaXplPSIxMiI+SW1hZ2VtPC90ZXh0Pgo8L3N2Zz4K'">
+                    <h3 class="perfume-name">${perfume.name}</h3>
+                    <p class="perfume-description">${perfume.description}</p>
+                    <span class="perfume-style">${perfume.style}</span>
+                </div>
+            `;
+        }
+
+        // Função para renderizar perfumes em uma categoria
+        function renderPerfumes(category, containerId, data = perfumesData) {
+            const container = document.getElementById(containerId);
+            if (data[category]) {
+                container.innerHTML = data[category].map(createPerfumeCard).join('');
+            }
+        }
+
+        // Função para combinar perfumes prontos e essências
+        function combineCategories() {
+            const combined = {
+                masculinos: [...perfumesData.masculinos, ...perfumesData['essencias-masculinas']],
+                femininos: [...perfumesData.femininos, ...perfumesData['essencias-femininas']],
+                unissex: [...perfumesData.unissex, ...perfumesData['essencias-unissex']]
+            };
+            return combined;
+        }
+
+        // Renderizar todas as categorias quando a página carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            const combinedData = combineCategories();
+            renderPerfumes('masculinos', 'masculinos', combinedData);
+            renderPerfumes('femininos', 'femininos', combinedData);
+            renderPerfumes('unissex', 'unissex', combinedData);
+        });
+    </script>
+</body>
+</html>
